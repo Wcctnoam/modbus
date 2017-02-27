@@ -13,7 +13,7 @@
 	"main"		:	"ModbusServer.js",
 	"repository"	: {
 		"type"	:	"git",
-		"url"	:	"git+https://github.com/Wcctnoam/ModbusServer.git"
+		"url"	:	"git+https://github.com/Wcctnoam/modbus.git"
 	},
 	"keywords"	:	[
 		"modbus",

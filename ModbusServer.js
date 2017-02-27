@@ -25,7 +25,7 @@ module.exports = function(RED) {
 				mqttaddr: n.mqttaddr,
 				mqtttport: n.mqttport,
 				modbusClientaddr: n.modbusClientadd,
-				modbusClientport: n.modbusClientport,
+				modbusClientport: n.modbusClientport
 
 			};
 			var check;
