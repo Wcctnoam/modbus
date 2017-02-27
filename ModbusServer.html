@@ -1,0 +1,50 @@
+<script type="text/javascript">
+	RED.nodes.registerType('ModbusServer',{
+		category: 'function',
+		color :"#E9967A",
+		icon: "db.png",
+		inputs: 1,
+		outputs: 1,
+		align: "right",
+		label: function() {
+			return this.name||this.topic||"ModbusServer";
+		},
+		labelStyle: function(){
+			return this.name?"node_label_italic":"";
+		},
+		defaults: {
+			mqttaddr: {value:"172.18.0.2", required:true},
+			mqttport: {value:"1883", required:true},
+
+			modbusClientaddr: {value:"172.18.0.10", required:true}
+			modbusClientport: {value:"5020", required:true}
+//			configFile :  {value:"/root/work/src/github.com/foxconn4tech/modbus/main/conf.json", required: true}
+		}
+	});
+</script>
+
+<script type="text/x-red" data-template-name="ModbusServer">
+	<div class="form-row">
+		<label for="node-input-mqttaddr"><i class="fa fa-globe"></i> MQTT BROKER IP Address.</label>
+		<input type="text" id="node-input-mqttaddr">
+	</div>
+	<div class="form-row">
+		<label for="node-input-mqttport"><i class="fa fa-arrows-h"></i> Connection Port.</label>
+		<input type="text" id="node-input-mqttport">
+	</div>
+	<div class="form-row">
+		<label for="node-input-modbusClientaddr"><i class="fa fa-globe"></i>MODBUS CLIENT IP Address.</label>
+		<input type="text" id="node-input-modbusClientaddr">
+	</div>
+	<div class="form-row">
+		<label for="node-input-modbusClientport"><i class="fa fa-arrows-h"></i> Connection Port.</label>
+		<input type="text" id="node-input-modbusClientport">
+	</div>
+
+</script>
+
+<script type="text/x-red" data-help-name="ModbusServer">
+	<p> modbusClient sends request to ModbusServer which then asks MQTT broker for input </p>
+	<p>IP and Port are required for the adress of the Hadoop server we connect to.</p>
+	<p>Table will be the name of the table created.</p>
+</script>

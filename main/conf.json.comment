@@ -1,0 +1,66 @@
+{
+    // Mapping between SCADA (modbus - unitID), MQTT topic (nodeID + topics) and type of smart meter
+    /* This example means:
+    ** unitID = 0 -> "Node1" -> Type 0
+    ** unitID = 1 -> "Node2" -> Type 1
+    ** unitID = 2 -> "Node3" -> Type 2 */
+    "UnitID": [0, 1, 2],
+    "NodeID": ["Node1", "Node2", "Node3"],
+    "Type": [0, 1, 2], // Length of Type (it is index of Types array) == Length of Types
+    "Types": [
+        // Type 0
+        {
+            // Mapping between modbus (number of register), MQTT topics and type of register "valueTypes"
+            /* This example means:
+            ** reg num = 8320 -> "volt1" -> val type 1
+            ** reg num = 8288 -> "volt2" -> val type 1
+            ** reg num = 8224 -> "volt3" -> val type 1
+            ** reg num = 8192 -> "volt4" -> val type 1 */
+            "numbers": [8320, 8288, 8224, 8192],
+            "topics": ["volt1", "volt2", "volt3", "volt4"],
+            "valueTypes": [1, 1, 1, 1]
+        },
+        // Type 1
+        {
+            "numbers": [8320, 8288, 8224, 8192],
+            "topics": ["volt1", "volt2", "volt3", "volt4"],
+            "valueTypes": [1, 1, 1, 1]
+        },
+        // Type 2
+        {
+            "numbers": [8320, 8288, 8224, 8192],
+            "topics": ["volt1", "volt2", "volt3", "volt4"],
+            "valueTypes": [1, 1, 1, 1]
+        }
+    ]
+}
+
+
+
+{
+    "registers":  [
+        {
+            "address": 8320, 
+            "dataBlock": 2,
+            "dataType": 1,
+            "bytesLength": 2,
+            "requiredField": true
+        },
+        {
+            "address": 8320, 
+            "dataBlock": 2,
+            "dataType": 1,
+            "bytesLength": 2,
+            "requiredField": true
+        },
+        {
+            "address": 8320, 
+            "dataBlock": 2,
+            "dataType": 1,
+            "bytesLength": 2,
+            "requiredField": true
+        },
+    ]
+}
+
+{"registers":  [{"address": 8320, "dataBlock": 2,"dataType": 1,"bytesLength": 2,"requiredField": true},{"address": 8320, "dataBlock": 2,"dataType": 1,"bytesLength": 2,"requiredField": true},{"address": 8320, "dataBlock": 2,"dataType": 1,"bytesLength": 2,"requiredField": true},{"address": 8320, "dataBlock": 2,"dataType": 1,"bytesLength": 2,"requiredField": true},{"address": 8320, "dataBlock": 2,"dataType": 1,"bytesLength": 2,"requiredField": true},{"address": 8320, "dataBlock": 2,"dataType": 1,"bytesLength": 2,"requiredField": true},{"address": 8320, "dataBlock": 2,"dataType": 1,"bytesLength": 2,"requiredField": true},{"address": 8320, "dataBlock": 2,"dataType": 1,"bytesLength": 2,"requiredField": true},{"address": 8320, "dataBlock": 2,"dataType": 1,"bytesLength": 2,"requiredField": true},{"address": 8320, "dataBlock": 2,"dataType": 1,"bytesLength": 2,"requiredField": true},{"address": 8320, "dataBlock": 2,"dataType": 1,"bytesLength": 2,"requiredField": true},{"address": 8320, "dataBlock": 2,"dataType": 1,"bytesLength": 2,"requiredField": true},{"address": 8320, "dataBlock": 2,"dataType": 1,"bytesLength": 2,"requiredField": true},{"address": 8320, "dataBlock": 2,"dataType": 1,"bytesLength": 2,"requiredField": true},{"address": 8320, "dataBlock": 2,"dataType": 1,"bytesLength": 2,"requiredField": true}]}

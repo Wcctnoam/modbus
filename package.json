@@ -1,0 +1,26 @@
+{
+	"name"		:	"node-red-contrib-ModbusServer",
+	"version"	:	"0.0.6",
+	"description"	:	"Golang bridge between TTN's MQTT Broker and modubus protocol for scada applications, running modbus server to handle request",
+	"dependencies":	{
+		"gonode": 	">=0.0.0"
+	},
+	"node-red"	: {
+		"nodes": {
+			"ModbusServer":	"ModbusServer.js"
+		}
+	},
+	"main"		:	"ModbusServer.js",
+	"repository"	: {
+		"type"	:	"git",
+		"url"	:	"git+https://github.com/Wcctnoam/ModbusServer.git"
+	},
+	"keywords"	:	[
+		"modbus",
+		"mqtt",
+		"server",
+		"golang",
+		"go",
+		"ttn"
+	]
+}

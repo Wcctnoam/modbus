@@ -1,0 +1,22 @@
+{
+    "UnitID": [0,1, 2],
+    "NodeID": ["Node1", "Node2", "Node3"],
+    "Type": [0, 1, 2],
+    "Types": [
+        {
+            "numbers": [8320, 8288, 8224, 8192],
+            "topics": ["volt1", "volt2", "volt3", "volt4"],
+            "valueTypes": [1, 1, 1, 1]
+        },
+        {
+            "numbers": [8320, 8288, 8224, 8192],
+            "topics": ["volt1", "volt2", "volt3", "volt4"],
+            "valueTypes": [1, 1, 1, 1]
+        },
+        {
+            "numbers": [8320, 8288, 8224, 8192],
+            "topics": ["volt1", "volt2", "volt3", "volt4"],
+            "valueTypes": [1, 1, 1, 1]
+        }
+    ]
+}
